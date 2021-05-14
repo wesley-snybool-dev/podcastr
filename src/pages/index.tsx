@@ -51,7 +51,7 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
                 />
 
                 <div className={styles.episodesDetails}>
-                  <a href="">{episode.title}</a>
+                  <a href="https://storage.googleapis.com/golden-wind/nextlevelweek/05-podcastr/audios/opensource.m4a">{episode.title}</a>
                   <p>{episode.members}</p>
                   <span>{episode.published_at}</span>
                   <span>{episode.durationAsString}</span>
@@ -59,7 +59,7 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
                 </div>
 
                 <button type='button'>
-                  <img src="/play-green.svg" alt="Tocar episódio" />
+                  <img src="/play-green.svg" alt="Tocar episodio" />
                 </button>
               </li>
             )
