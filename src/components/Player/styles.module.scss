@@ -1,3 +1,4 @@
+
 .playerContainer {
     padding: 3rem 4rem;
     width: 26.5rem;
@@ -31,6 +32,16 @@
     }
 
 
+}
+
+
+@media (max-width: 768px) {
+    .playerContainer {
+        height: 50vh;
+        width: 30rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 
 .emptyPlayer {
