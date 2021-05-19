@@ -7,6 +7,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './home.module.scss'
+import { useContext } from "react"
+import { PlayerContext } from "../contexts/PlayerContext"
+
+
+
 
 
 
@@ -31,12 +36,12 @@ type HomeProps = {
 
 export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
 
-
+  const { play } = useContext(PlayerContext)
 
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
-        <h2>Últimos lançamentos</h2>
+        <h2>Últimos lançamentos </h2>
 
         <ul >
           {lastestEpisodes.map(episode => {
@@ -60,7 +65,7 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
 
                 </div>
 
-                <button type='button'>
+                <button type='button'  onClick={() => play(episode)}>
                   <img src="/play-green.svg" alt="Tocar episodio" />
                 </button>
               </li>
