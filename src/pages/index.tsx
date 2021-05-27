@@ -35,7 +35,7 @@ type HomeProps = {
 
 export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
 
-  const { playList } = usePlayer();
+  const { playList, cleanStatePlayer } = usePlayer();
 
   const episodeList = [...lastestEpisodes, ...allEpisodes];
 
@@ -106,7 +106,7 @@ export default function Home({ lastestEpisodes, allEpisodes }: HomeProps) {
                   </td>
                   <td>
                     <Link href={`/episodes/${episode.id}`} >
-                      <a>{episode.title}</a>
+                      <a onClick={() => cleanStatePlayer()}>{episode.title}</a>
                     </Link>
                   </td>
                   <td>{episode.members}</td>

@@ -19,6 +19,7 @@ type PlayerContextData = {
     playNext: () => void;
     playPrevious: () => void;
     tooglePlay: () => void;
+    cleanStatePlayer: () => void;
     setIsPlayingState: (state: boolean) => void;
     hasNext: boolean;
     hasPrevious: boolean;
@@ -56,14 +57,15 @@ export function PlayerContexProvider({ children }: PlayerContexProviderProps) {
     }
 
 
-
+    function cleanStatePlayer () {
+        setEpisodeList([])
+    }
 
 
 
 
     function tooglePlay() {
         setIsPlaying(!isPlaying)
-        setEpisodeList([])
     }
 
     function setIsPlayingState(state: boolean) {
@@ -104,6 +106,7 @@ export function PlayerContexProvider({ children }: PlayerContexProviderProps) {
                 playPrevious,
                 isPlaying,
                 tooglePlay,
+                cleanStatePlayer,
                 setIsPlayingState,
                 hasNext,
                 hasPrevious,

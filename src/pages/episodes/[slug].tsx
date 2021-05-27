@@ -36,7 +36,7 @@ type EpisodeProps = {
 
 export default function Episode({ episode }: EpisodeProps) {
 
-    const { play, tooglePlay } = usePlayer();
+    const { play, cleanStatePlayer } = usePlayer();
 
 
     return (
@@ -44,7 +44,7 @@ export default function Episode({ episode }: EpisodeProps) {
             <div className={styles.thumbnailContainer}>
 
                 <Link href="/" >
-                    <button type="button" onClick={() => tooglePlay()}>
+                    <button type="button" onClick={() => cleanStatePlayer()}>
                         <img src="/arrow-left.svg" alt="Voltar" />
                     </button>
                 </Link>
