@@ -36,7 +36,9 @@ type EpisodeProps = {
 
 export default function Episode({ episode }: EpisodeProps) {
 
-    const { play, cleanStatePlayer } = usePlayer();
+    const { play, cleanStatePlayer } = usePlayer();   
+
+    
 
 
     return (
